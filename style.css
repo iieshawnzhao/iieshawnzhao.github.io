@@ -1,0 +1,98 @@
+:root {
+  --accent: #0984e3;
+  --text: #2c3e50;
+  --muted: #4e6e8e;
+  --line: #eaecef;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: "Times New Roman", "SimSun", "宋体", serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.navbar {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.6rem;
+  padding: 0.7rem 1.5rem;
+  box-sizing: border-box;
+  line-height: 2.2rem;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name { font-size: 1.3rem; font-weight: 600; color: var(--text); }
+.links { position: absolute; top: 0.7rem; right: 1.5rem; font-size: 0.9rem; }
+.links a { color: var(--text); padding-bottom: 0.25rem; border-bottom: 2px solid var(--accent); }
+
+.page { padding-bottom: 2rem; }
+.content { max-width: 740px; margin: 0 auto; padding: 2rem 2.5rem; }
+.content > :first-child { margin-top: 3.6rem; }
+
+.profile { display: flex; flex-direction: row; align-items: stretch; }
+.profile .image { max-width: 120px; flex: 0 0 120px; }
+.profile .image img { display: block; width: 100%; padding: 2px; border: 1px solid #f2f3f3; box-sizing: border-box; }
+.profile .info { flex: 1 1 auto; display: flex; flex-direction: column; padding-left: 3rem; }
+.name { font-size: 1.85rem; font-weight: 600; }
+.bio p { margin: 0 0 0.5rem; }
+.socials { display: flex; margin-bottom: 0.2rem; }
+.socials img { width: 1.3rem; margin-right: 0.6rem; }
+.email { font-family: "Times New Roman", "Courier New", monospace; }
+
+.site-footer {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 1rem 2.5rem 2rem;
+  color: #9fa9aa;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+h2 {
+  margin-top: -3.1rem;
+  padding-top: 4.6rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.65rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+h3 { margin: 1rem 0 0.4rem; font-size: 1.15rem; line-height: 1.35; }
+p, ul, ol { line-height: 1.7; }
+p { margin: 0 0 0.5rem; }
+ul, ol { padding-left: 1.2em; margin-top: 0.35rem; }
+li { margin-bottom: 0.3rem; }
+strong { font-weight: 600; }
+
+.kv { margin: 0.5rem 0; padding-left: 0; list-style: none; }
+.kv li { margin-bottom: 0.25rem; }
+
+@media (max-width: 719px) {
+  .navbar { padding-left: 1.5rem; }
+  .links { display: none; }
+  .content { padding: 2rem; }
+  .site-footer { padding-left: 2rem; padding-right: 2rem; }
+}
+
+@media (max-width: 419px) {
+  .content { padding: 1.5rem; }
+  .profile .image { max-width: 100px; flex-basis: 100px; }
+  .profile .info { padding-left: 1.2rem; }
+  .name { font-size: 1.55rem; }
+  h2 { font-size: 1.45rem; }
+  .site-footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
